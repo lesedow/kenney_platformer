@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|c:\\users\\lesed\\onedrive\\desktop\\godot\\kenney-platformer\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|solutionrelative:scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|c:\\users\\lesed\\onedrive\\desktop\\godot\\kenney-platformer\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|c:\\users\\lesed\\onedrive\\desktop\\godot\\kenney-platformer\\scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|solutionrelative:scripts\\killzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|c:\\users\\lesed\\onedrive\\desktop\\godot\\kenney-platformer\\scripts\\respawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9718F832-A49A-401A-8A01-62422F461279}|KenneyPlatformer.csproj|solutionrelative:scripts\\respawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\Player.cs",
+              "RelativeDocumentMoniker": "scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\Player.cs",
+              "RelativeToolTip": "scripts\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T11:36:38.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Level.cs",
+              "DocumentMoniker": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\Level.cs",
+              "RelativeDocumentMoniker": "scripts\\Level.cs",
+              "ToolTip": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\Level.cs",
+              "RelativeToolTip": "scripts\\Level.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T20:54:19.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RespawnPoint.cs",
+              "DocumentMoniker": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\RespawnPoint.cs",
+              "RelativeDocumentMoniker": "scripts\\RespawnPoint.cs",
+              "ToolTip": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\RespawnPoint.cs",
+              "RelativeToolTip": "scripts\\RespawnPoint.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:23:43.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KillZone.cs",
+              "DocumentMoniker": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\KillZone.cs",
+              "RelativeDocumentMoniker": "scripts\\KillZone.cs",
+              "ToolTip": "C:\\Users\\lesed\\OneDrive\\Desktop\\Godot\\kenney-platformer\\scripts\\KillZone.cs",
+              "RelativeToolTip": "scripts\\KillZone.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA4wA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:20:39.259Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

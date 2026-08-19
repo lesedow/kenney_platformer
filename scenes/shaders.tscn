@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://0y7wf7fo23xc"]
+
+[ext_resource type="Shader" uid="uid://8768dwyqypcj" path="res://shaders/learn_shaders.gdshader" id="1_crhbq"]
+[ext_resource type="Texture2D" uid="uid://spkdbb82vwax" path="res://icon.svg" id="1_wainb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dwgg1"]
+shader = ExtResource("1_crhbq")
+shader_parameter/center_circle_size = 0.06000000285
+shader_parameter/circle_size = 0.00400000019
+shader_parameter/circle_distance = 0.03600000171
+shader_parameter/outer_circle_gap_size = 0.102000004845
+shader_parameter/animated = true
+shader_parameter/crosshair_width = 0.062000002945
+shader_parameter/crosshair_height = 0.0790000037525
+shader_parameter/distance_from_center = 0.02700000128249999
+
+[node name="Shaders" type="Node2D" unique_id=55767892]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1997802870]
+material = SubResource("ShaderMaterial_dwgg1")
+texture = ExtResource("1_wainb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1683421857]
+zoom = Vector2(5, 5)

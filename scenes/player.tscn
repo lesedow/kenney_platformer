@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://sqqc7ut6y5ml"]
+
+[ext_resource type="Texture2D" uid="uid://d03qbrlyug1q5" path="res://spritesheets/tilemap-characters.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://d33owpa60ljme" path="res://scripts/Player.cs" id="1_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qt1cf"]
+size = Vector2(12, 20)
+
+[node name="Player" type="CharacterBody2D" unique_id=1142476966 node_paths=PackedStringArray("visual")]
+collision_mask = 14
+script = ExtResource("1_g2els")
+visual = NodePath("Visual")
+maxFallSpeed = 400.0
+jumpSpeed = -300.0
+jumpCutAmount = 0.45
+squashDownValues = Vector2(1.3, 0.95)
+squashUpValues = Vector2(0.95, 1.3)
+squashAnimationDuration = 0.2
+transitionType = 7
+maxSpeed = 200.0
+acceleration = 1500.0
+deceleration = 3500.0
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=1589812589]
+texture = ExtResource("1_3vyb7")
+region_enabled = true
+region_rect = Rect2(2, 1, 20, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093085616]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_qt1cf")
