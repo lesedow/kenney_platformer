@@ -7,31 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://21snshxn5x7e" path="res://scenes/kill_zone.tscn" id="5_rhhhf"]
 [ext_resource type="PackedScene" uid="uid://by33hnodvvrhk" path="res://scenes/respawn_point.tscn" id="6_qjcqe"]
 [ext_resource type="Script" uid="uid://c484ebyb1pqep" path="res://scripts/ElapsedTimeDisplay.cs" id="7_qjcqe"]
-[ext_resource type="Texture2D" uid="uid://dcg7e0kvyx6w5" path="res://spritesheets/tilemap.png" id="7_rhhhf"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ygg6"]
-atlas = ExtResource("7_rhhhf")
-region = Rect2(190, 152, 18, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eho74"]
-atlas = ExtResource("7_rhhhf")
-region = Rect2(190, 152, 18, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tpn77"]
-atlas = ExtResource("7_rhhhf")
-region = Rect2(190, 152, 18, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_itqtr"]
-atlas = ExtResource("7_rhhhf")
-region = Rect2(190, 152, 18, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xmkwx"]
-atlas = ExtResource("7_rhhhf")
-region = Rect2(190, 152, 18, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_62smf"]
-atlas = ExtResource("7_rhhhf")
-region = Rect2(190, 152, 18, 18)
+[ext_resource type="Texture2D" uid="uid://dp08los4xvmpb" path="res://atlas_textures/minutes_tens.tres" id="8_171oe"]
+[ext_resource type="Texture2D" uid="uid://b03n6veso2t8v" path="res://atlas_textures/minutes_unit.tres" id="9_e8wc3"]
+[ext_resource type="Texture2D" uid="uid://1jjqag0ku6jk" path="res://atlas_textures/seconds_tens.tres" id="10_ypn4w"]
+[ext_resource type="Texture2D" uid="uid://do07r43otlwjm" path="res://atlas_textures/seconds_unit.tres" id="11_vc1y7"]
+[ext_resource type="Texture2D" uid="uid://coeh47mwqbgue" path="res://atlas_textures/centiseconds_tens.tres" id="12_44yx7"]
+[ext_resource type="Texture2D" uid="uid://ck6iflwsw8ch2" path="res://atlas_textures/centiseconds_unit.tres" id="13_lbrgs"]
 
 [node name="Level0" type="Node2D" unique_id=9903959 node_paths=PackedStringArray("respawnPointsParent", "player")]
 script = ExtResource("1_xp8tn")
@@ -77,71 +58,80 @@ PointColor = Color(0.6431373, 0.13725491, 0.20784314, 0.7058824)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=919963336]
 
-[node name="Timer" type="Control" parent="CanvasLayer" unique_id=279904701 node_paths=PackedStringArray("minutes", "minute", "seconds", "second", "centiseconds", "centisecond")]
+[node name="Timer" type="Control" parent="CanvasLayer" unique_id=279904701]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 37.0
+grow_horizontal = 2
 script = ExtResource("7_qjcqe")
-minutes = NodePath("Minutes")
-minute = NodePath("Minute")
-seconds = NodePath("Seconds")
-second = NodePath("Second")
-centiseconds = NodePath("Centiseconds")
-centisecond = NodePath("Centisecond")
+textures = Array[AtlasTexture]([ExtResource("8_171oe"), ExtResource("9_e8wc3"), ExtResource("10_ypn4w"), ExtResource("11_vc1y7"), ExtResource("12_44yx7"), ExtResource("13_lbrgs")])
+regionSize = 18.0
+separation = 1.0
+startPosition = Vector2(0, 152)
 
-[node name="Minutes" type="TextureRect" parent="CanvasLayer/Timer" unique_id=272465432]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 23.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_1ygg6")
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Timer" unique_id=1697847636]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -9.5
+offset_right = 44.0
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Minute" type="TextureRect" parent="CanvasLayer/Timer" unique_id=1756704708]
-layout_mode = 0
-offset_left = 29.0
-offset_top = 5.0
-offset_right = 47.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_eho74")
+[node name="Minutes" type="Control" parent="CanvasLayer/Timer/HBoxContainer" unique_id=1212563992]
+layout_mode = 2
 
-[node name="Seconds" type="TextureRect" parent="CanvasLayer/Timer" unique_id=1317375148]
+[node name="MinutesDisplay" type="TextureRect" parent="CanvasLayer/Timer/HBoxContainer/Minutes" unique_id=272465432]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 5.0
-offset_right = 74.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_tpn77")
+offset_right = 18.0
+offset_bottom = 18.0
+texture = ExtResource("8_171oe")
 
-[node name="Second" type="TextureRect" parent="CanvasLayer/Timer" unique_id=1950868092]
+[node name="MinuteDisplay" type="TextureRect" parent="CanvasLayer/Timer/HBoxContainer/Minutes" unique_id=1756704708]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 5.0
-offset_right = 98.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_itqtr")
+offset_left = 10.0
+offset_right = 28.0
+offset_bottom = 18.0
+texture = ExtResource("9_e8wc3")
 
-[node name="Centiseconds" type="TextureRect" parent="CanvasLayer/Timer" unique_id=1843103019]
-layout_mode = 0
-offset_left = 107.0
-offset_top = 5.0
-offset_right = 125.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_xmkwx")
+[node name="Seconds" type="Control" parent="CanvasLayer/Timer/HBoxContainer" unique_id=422349275]
+layout_mode = 2
 
-[node name="Centisecond" type="TextureRect" parent="CanvasLayer/Timer" unique_id=1965652655]
+[node name="SecondsDisplay" type="TextureRect" parent="CanvasLayer/Timer/HBoxContainer/Seconds" unique_id=1317375148]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 5.0
-offset_right = 149.0
-offset_bottom = 23.0
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_62smf")
+offset_left = 25.0
+offset_right = 43.0
+offset_bottom = 18.0
+texture = ExtResource("10_ypn4w")
+
+[node name="SecondDisplay" type="TextureRect" parent="CanvasLayer/Timer/HBoxContainer/Seconds" unique_id=1950868092]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 53.0
+offset_bottom = 18.0
+texture = ExtResource("11_vc1y7")
+
+[node name="Centiseconds" type="Control" parent="CanvasLayer/Timer/HBoxContainer" unique_id=1978380115]
+layout_mode = 2
+
+[node name="CentisecondsDisplay" type="TextureRect" parent="CanvasLayer/Timer/HBoxContainer/Centiseconds" unique_id=1843103019]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 68.0
+offset_bottom = 18.0
+texture = ExtResource("12_44yx7")
+
+[node name="CentisecondDisplay" type="TextureRect" parent="CanvasLayer/Timer/HBoxContainer/Centiseconds" unique_id=1965652655]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 78.0
+offset_bottom = 18.0
+texture = ExtResource("13_lbrgs")
 
 [editable path="KillZone"]

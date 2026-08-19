@@ -1,15 +1,27 @@
 using Godot;
 public partial class ElapsedTime : Node
 {
-    public int elapesedMinutes { get; private set; }
-    public int elapsedSeconds { get; private set; }
-    public int elapsedCentiSeconds { get; private set; }
+    public static int ElapsedMinutes { get; private set; }
+    public static int ElapsedSeconds { get; private set; }
+    public static int ElapsedCentiseconds { get; private set; }
+    private static float acumulatedDelta = 0.0f;
 
-    private float acumulatedDelta = 0.0f;
+    public static ElapsedTime Instance { get; set; }
+
+    private ElapsedTime() { }
+    public override void _Ready()
+    {
+        if (Instance != null)
+        {
+            Instance = this;
+        }
+    }
 
     private void RecalculateElapsedTime()
     {
-        elapsedSeconds = (int)(acumulatedDelta % 60);
+        ElapsedMinutes = (int)(acumulatedDelta / 60) % 60;
+        ElapsedSeconds = (int)(acumulatedDelta % 60);
+        ElapsedCentiseconds = (int)((acumulatedDelta * 100) % 100);
     }
 
     public override void _Process(double delta)
