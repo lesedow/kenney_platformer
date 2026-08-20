@@ -10,6 +10,8 @@ public partial class Level : Node2D
     private List<RespawnPoint> respawnPoints;
     public RespawnPoint CurrentRespawnPoint { get; private set; }
 
+    private LevelStats stats;
+
     public override void _Ready()
     {
         Debug.Assert(respawnPointsParent != null,
@@ -31,6 +33,6 @@ public partial class Level : Node2D
 
     public override void _Process(double delta)
     {
-
+        
     }
 }

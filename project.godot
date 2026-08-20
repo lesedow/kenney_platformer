@@ -14,10 +14,6 @@ config/name="KenneyPlatformer"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-ElapsedTime="*uid://dt325i1nlisik"
-
 [display]
 
 window/size/viewport_width=640

@@ -13,7 +13,10 @@ public partial class KillZone : Area2D
         Tween tween = CreateTween();
         tween.SetProcessMode(Tween.TweenProcessMode.Physics);
 
-        body.SetPhysicsProcess(false);
+        Player player = (Player)body;
+
+        player.SetPhysicsProcess(false);
+        player.StopMovement();
 
         tween.Parallel()
              .TweenProperty(body, "position", level.CurrentRespawnPoint.Position, .3f)
@@ -27,7 +30,7 @@ public partial class KillZone : Area2D
 
         tween.TweenProperty(body, "modulate:a", 1.0f, .3f)
              .SetEase(Tween.EaseType.In)
-             .SetTrans(Tween.TransitionType.Cubic);
+             .SetTrans(Tween.TransitionType.Cubic);     
 
         await ToSignal(tween, Tween.SignalName.Finished);
 

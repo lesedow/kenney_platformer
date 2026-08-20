@@ -3,6 +3,7 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
     [Export] private Sprite2D visual;
+    [Export] private GpuParticles2D jumpParticles;
 
     [ExportGroup("Jump Settings")]
     [Export] private float maxFallSpeed;    
@@ -37,6 +38,10 @@ public partial class Player : CharacterBody2D
         if (Input.IsActionJustPressed("jump") && IsOnFloor())
         {
             PlayJumpWindUp();
+
+            jumpParticles.Restart();
+            jumpParticles.Emitting = true;
+
             velocity.Y = jumpSpeed;
         }
 
@@ -83,6 +88,8 @@ public partial class Player : CharacterBody2D
         }
 
     }
+
+    public void StopMovement() => velocity.X = 0.0f;  
 
     public override void _PhysicsProcess(double delta)
     {
